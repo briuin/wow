@@ -27,10 +27,21 @@ Route::get('user/{id}', function ($id) {
     return 'User '.$id;
 });
 
-Route::get('admin/profile', ['middleware' => 'auth', function()
+Route::get('posts/{id}', ['as' => 'posts.show', function()
 {
     //
 }]);
+
+Route::get('hello/{name?}', function($name = 'John'){
+   return 'My name is '.$name;
+})
+->where('name','[a-z]+');
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('users', function ()    {
+        // Matches The "/admin/users" URL
+    });
+});
 
 /*Route::get('user/profile', [
     'as' => 'profile', 'uses' => 'UserController@showProfile'

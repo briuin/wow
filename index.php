@@ -1,5 +1,5 @@
 <?php
-header("Location: http://briuin.com/home/public")
+header("Location: http://localhost:8888/briuin/public")
 
 
 ?>

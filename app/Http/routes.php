@@ -27,10 +27,10 @@ Route::get('user/{id}', function ($id) {
     return 'User '.$id;
 });
 
-Route::get('posts/{id}', ['as' => 'posts.show', function()
+/*Route::get('posts/{id}', ['as' => 'posts.show', function()
 {
     //
-}]);
+}]);*/
 
 Route::get('hello/{name?}', function($name = 'John'){
    return 'My name is '.$name;
@@ -42,6 +42,18 @@ Route::group(['prefix' => 'admin'], function () {
         // Matches The "/admin/users" URL
     });
 });
+
+Route::get('posts', ['as' => 'posts.index', 'uses' =>
+    'PostsController@index']);
+
+Route::get('posts/create', ['as' => 'posts.create', 'uses'
+=> 'PostsController@create']);
+
+Route::get('posts/{id}', ['as' => 'posts.show', 'uses' =>
+    'PostsController@show']);
+
+Route::get('posts/{id}/edit', ['as' => 'posts.edit', 'uses'
+=> 'PostsController@edit']);
 
 /*Route::get('user/profile', [
     'as' => 'profile', 'uses' => 'UserController@showProfile'

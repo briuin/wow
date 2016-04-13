@@ -43,18 +43,18 @@ Route::group(['prefix' => 'admin'], function () {
     });
 });
 
-Route::get('posts', ['as' => 'posts.index', 'uses' =>
-    'PostsController@index']);
+Route::get('posts/random', ['as' => 'posts.random', 'uses' =>
+    'PostsController@random']);
 
-Route::get('posts/create', ['as' => 'posts.create', 'uses'
-=> 'PostsController@create']);
+/*
+ *
+index,create,store,show,edit,update,destroy
 
-Route::get('posts/{id}', ['as' => 'posts.show', 'uses' =>
-    'PostsController@show']);
+Route::resource('photo', 'PhotoController',
+                ['except' => ['create', 'store', 'update', 'destroy']]);
 
-Route::get('posts/{id}/edit', ['as' => 'posts.edit', 'uses'
-=> 'PostsController@edit']);
+*/
 
-/*Route::get('user/profile', [
-    'as' => 'profile', 'uses' => 'UserController@showProfile'
-]);*/
+Route::resource('posts', 'PostsController',
+    ['only' => ['index', 'create', 'show', 'edit', 'store']]);
+

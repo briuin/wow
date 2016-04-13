@@ -1,0 +1,53 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.7.5
+3 info using node@v0.10.24
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchOtherPackageData laravelcollective/html@^5.1
+20 silly cache add args [ 'laravelcollective/html@^5.1', null ]
+21 verbose cache add spec laravelcollective/html@^5.1
+22 silly cache add parsed spec { raw: 'laravelcollective/html@^5.1',
+22 silly cache add   scope: null,
+22 silly cache add   name: null,
+22 silly cache add   rawSpec: 'laravelcollective/html@^5.1',
+22 silly cache add   spec: '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1',
+22 silly cache add   type: 'local' }
+23 error addLocal Could not install /Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1
+24 silly fetchPackageMetaData Error: ENOENT, open '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1'
+24 silly fetchPackageMetaData  error for laravelcollective/html@^5.1 { [Error: ENOENT, open '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1']
+24 silly fetchPackageMetaData   errno: 34,
+24 silly fetchPackageMetaData   code: 'ENOENT',
+24 silly fetchPackageMetaData   path: '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1' }
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Starting
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: ENOENT, open '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1'
+31 verbose cwd /Users/briuin/PhpstormProjects/briuin
+32 error Darwin 15.4.0
+33 error argv "node" "/usr/local/bin/npm" "install"
+34 error node v0.10.24
+35 error npm  v3.7.5
+36 error path /Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1
+37 error code ENOENT
+38 error errno 34
+39 error enoent ENOENT, open '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1'
+40 error enoent ENOENT, open '/Users/briuin/PhpstormProjects/briuin/laravelcollective/html@^5.1'
+40 error enoent This is most likely not a problem with npm itself
+40 error enoent and is related to npm not being able to find a file.
+41 verbose exit [ 34, true ]

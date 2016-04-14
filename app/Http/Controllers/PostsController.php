@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\PostRequest;
+
 use App\Http\Requests;
 
 class PostsController extends Controller
@@ -19,11 +21,17 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = \App\Post::find($id);
+
+        if (is_null($post))
+        {
+            return redirect()->route('posts.index') ->with('message', '找不到該 章');
+        }
+
         $data = compact('post');
         return view('posts.show', $data);
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         //dd($request->all());
         $post = \App\Post::create($request->all());
